@@ -74,7 +74,8 @@ gulp.task('cleanAll',function(){
             .pipe(clean());
 })
 gulp.task('lib',function(){
-      return gulp.src(['bower_components/*/*.min.js','bower_components/*/*/*.min.js'])
+      return gulp.src(['bower_components/**/*.min.js','bower_components/**/**/*.min.js'])
+            .pipe(rename({dirname:''}))
             .pipe(gulp.dest('lib/'))
 })
 // gulp.task('default', function () {
