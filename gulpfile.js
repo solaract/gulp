@@ -73,6 +73,10 @@ gulp.task('cleanAll',function(){
       return gulp.src('dist/*/*')
             .pipe(clean());
 })
+gulp.task('lib',function(){
+      return gulp.src(['bower_components/*/*.min.js','bower_components/*/*/*.min.js'])
+            .pipe(gulp.dest('lib/'))
+})
 // gulp.task('default', function () {
 //    return gulp.src('js/*.+(js|css)')
 //       .pipe(jshint())
