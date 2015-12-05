@@ -12,7 +12,7 @@ var gulp = require('gulp'),
       rename = require('gulp-rename'),                      //重命名
       clean = require('gulp-clean'),                         //清空文件夹
       imgmin = require('gulp-imagemin');                    //图片压缩
-gulp.task('default',['cleanAll','less','img','js','html'],function(){
+gulp.task('default',['less','img','js','html'],function(){
       
       gulp.watch('src/less/*.less',['less']).on('change',function(e){
             console.log('File ' + e.path + ' was ' + e.type + ', running tasks...');
